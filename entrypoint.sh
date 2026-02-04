@@ -29,9 +29,9 @@ if [ -n "$PROJECT_ID" ]; then
     firebase use --add "$PROJECT_ID"
 fi
 
-if [ -n "$CONFIG_VALUES" ]; then
-    echo "Setting config for function"
-    firebase functions:config:set $CONFIG_VALUES
+if [ -n "$SECRETS" ]; then
+    echo "Setting secrets for function"
+    firebase functions:secret:set $SECRETS
 fi
 
 sh -c "firebase $*"

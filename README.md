@@ -37,7 +37,13 @@ _**Response has been removed for now as it caused loads of issues in the bash sc
 
 * `PROJECT_PATH` - **Optional**. The path to the folder containing `firebase.json` if it doesn't exist at the root of your repository. e.g. `./my-app`.
 
-* `CONFIG_VALUES` - **Optional**. The configuration values for Firebase function that would normally be set with `firebase functions:config:set [value]`. Example: `CONFIG_VALUES: stripe.secret_key=SECRET_KEY zapier.secret_key=SECRET_KEY`.
+~~* `CONFIG_VALUES` - **Optional**. The configuration values for Firebase function that would normally be set with `firebase functions:config:set [value]`. Example: `CONFIG_VALUES: stripe.secret_key=SECRET_KEY zapier.secret_key=SECRET_KEY`.~~
+
+_**Deprecated: After December 2025, new deployments with functions.config() will fail. If you are using functions.config(), [migrate your configuration](https://
+firebase.google.com/docs/functions/config-env#migrate-config) as soon as possible.**_
+
+* `SECRETS` - **Optional**. The secrets values for Firebase function that would normally be set with `firebase functions:secrets:set [value]`. Example: `SECRETS: stripe.secret_key=SECRET_KEY zapier.secret_key=SECRET_KEY`.
+
 
 ## Example
 
